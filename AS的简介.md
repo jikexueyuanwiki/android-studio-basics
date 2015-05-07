@@ -3,7 +3,7 @@
 ------
 
 
-![studio-hero.png](.\images\studio-hero.png)
+![studio-hero.png](images\studio-hero.png)
 
 Android Studio 是一个为Android平台开发程序的开发环境，基于 intelliJ IDEA.，它为开发者提供了集成的android开发工具用于开发和调试。2013年5月16日由Google产品经理Ellie Powers在Google I/O大会上发布的，可供开发者免费使用,而且有google长期技术支持(google已经停止对ADT的更新，这里还是强烈推荐大家使用AS作为开发ide)。
 
