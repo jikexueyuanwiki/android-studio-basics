@@ -13,7 +13,7 @@ http://www.androiddevtools.cn/#android-studio
 ##一、windows篇
 建议大家下载集成了SDK的android studio版本，直接安装就可使用
 
-![download.png](.\images\download.png)
+![download.png](images\download.png)
 
 #####事先准备：配置好jdk环境（这里不做过多介绍）
 打开安装包，选择安装目录，一路到底。
@@ -21,7 +21,7 @@ http://www.androiddevtools.cn/#android-studio
 若下载的不是集成了SDK的AS，则需下载配置一下SDK；
 
 
-![sdkwin.png](.\images\sdkwin.png)
+![sdkwin.png](images\sdkwin.png)
 
 这里还是推荐下载第一个，因为exe在安装的过程中会配置好SDK的环境变量；
 
@@ -32,15 +32,15 @@ http://www.androiddevtools.cn/#android-studio
 
 之后打开android studio，在初始界面configura里配置好SDK目录。
 
-![QQ截图20150507020558.png](.\images\QQ截图20150507020558.png)
+![QQ截图20150507020558.png](images\QQ截图20150507020558.png)
 
 
 ##二、Mac篇
 默认配置好JDK
 android studio下载（并没有集成SDK）安装完成后需配置sdk目录
-![downmac.png](.\images\downmac.png)
+![downmac.png](images\downmac.png)
 SDK下载
-![sdkmac.png](.\images\sdkmac.png)
+![sdkmac.png](images\sdkmac.png)
 >* android-sdk环境变量配置
 >1.启动Terminal终端工具
 2.输入cd ~/ 进入当前用户的home目录
@@ -52,6 +52,8 @@ open .bash_profile
 5、在文件中写入以下内容：export PATH=${PATH}:这里是platform-tools 的绝对路径，以我的为例：/Volumes/workplace/sdk/platform-tools/
 6、执行如下命令：source .bash_profile 
 7、验证：输入adb回车。如果未显示command not found，说明此命令有效，环境便亮设置完成。
+
+
 ##三、ubuntu篇
 #### 配置顺序
 java环境搭建->下载安装android studio->下载配置SDK->创建快捷方式
@@ -170,14 +172,14 @@ echo 'export JAVA_CMD="/usr/local/java/jdk1.8.0_25/bin/java"' >> ~/.bashrc /
 
 #### 4.新建项目
 
-![project.png](.\images\project.png)
+![project.png](images\project.png)
 
 
 
-![p.png](.\images\p.png)
-![QQ截图20150507015808.png](.\images\QQ截图20150507015808.png)
-![QQ截图20150507015817.png](.\images\QQ截图20150507015817.png)
+![p.png](images\p.png)
+![QQ截图20150507015808.png](images\QQ截图20150507015808.png)
+![QQ截图20150507015817.png](images\QQ截图20150507015817.png)
 
 
-![QQ截图20150507020029.png](.\images\QQ截图20150507020029.png)
+![QQ截图20150507020029.png](images\QQ截图20150507020029.png)
 
