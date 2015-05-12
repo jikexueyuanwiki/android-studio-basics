@@ -1,67 +1,154 @@
-# 一、Android Studio 的下载与安装（win,mac,ubuntu)
+# 一、Android Studio 的下载与安装
 
-标签（空格分隔）：androidstudio ubuntu win mac
+
 
 ---
 
+### 准备：
++ 安装好JDK，配置好环境变量；
 
-* 官方下载地址（需翻墙）
+
+
++ 下载安装包
+ * 官方下载地址（需翻墙）
 http://developer.android.com/sdk/index.html
-* 推荐国内镜像网站
+ * 推荐国内镜像网站
 http://www.androiddevtools.cn/#android-studio
 
-##一、windows篇
-建议大家下载集成了SDK的android studio版本，直接安装就可使用
-
-![download.png](images/download.png)
-
-#####事先准备：配置好jdk环境（这里不做过多介绍）
-打开安装包，选择安装目录，一路到底。
-
-若下载的不是集成了SDK的AS，则需下载配置一下SDK；
+![android-studio-2-downpackage.png](images/android-studio-2-downpackage.png)
+更具自己的操作系统选取安装包下载。
 
 
-![sdkwin.png](images/sdkwin.png)
-
-这里还是推荐下载第一个，因为exe在安装的过程中会配置好SDK的环境变量；
-
-若下载的是压缩包版，则另需配置，如下：
->* 解压SDK压缩包
->* 在系统变量PATH里添加在变量值里加入androidSDK中platform-tools和tools的目录路径，这里我的是E:\android-sdk_r20.0.3-windows\android-sdk-windows\platform-tools和E:\adt-bundle-windows-x86_64-20130729\sdk\tools。
->* 完成后在CMD中输入abd,验证是否成功
-
-之后打开android studio，在初始界面configura里配置好SDK目录。
-
-![QQ截图20150507020558.png](images/QQ截图20150507020558.png)
 
 
-##二、Mac篇
-默认配置好JDK
-android studio下载（并没有集成SDK）安装完成后需配置sdk目录
-![downmac.png](images/downmac.png)
-SDK下载
-![sdkmac.png](images/sdkmac.png)
->* android-sdk环境变量配置
->1.启动Terminal终端工具
-2.输入cd ~/ 进入当前用户的home目录
-
-3. 创建：
-touch .bash_profile
-4.打开并编辑：
-open .bash_profile
-5、在文件中写入以下内容：export PATH=${PATH}:这里是platform-tools 的绝对路径，以我的为例：/Volumes/workplace/sdk/platform-tools/
-6、执行如下命令：source .bash_profile 
-7、验证：输入adb回车。如果未显示command not found，说明此命令有效，环境便亮设置完成。
+###安装
 
 
-##三、ubuntu篇
+![android-studio-2-install.png](images/android-studio-2-install.png)
+
+
+![android-studio-2-install2.png](images/android-studio-2-install2.png)
+选取安装内容，以图上为例分别是分别是studio开发环境，sdk和虚拟机，根据自己的需求安装
+
+
+![android-studio-2-install3.png](images/android-studio-2-install3.png)
+选取安装路径（android studio的路径和android sdk的路径）
+
+
+![android-studio-2-install5.png](images/android-studio-2-install5.png)
+等待安装
+
+
+![android-studio-2-install6.png](images/android-studio-2-install6.png)
+安装完毕
+
+
+
+### SDK配置
+#### 在线配置
+
+##### 初次打开配置
+![android-studio-2-studio_splash.png](images/android-studio-2-studio_splash.png)
+打开android studio
+
+
+![android-studio-2-sdkset0.png](images/android-studio-2-sdkset0.png)
+![android-studio-2-installsdk3.png](images/android-studio-2-installsdk3.png)
+初次打开后会检查sdk更新，好在google对sdk进行了处理，可以在线更新，等待更新结束就可以了。
+
++ 但如果网速不够，会一直卡在这里很久。
+	这里修改一下：编辑器打开bin目录的idea.properties，增加一行：disable.android.first.run=true，（mac平台的右键安装包->Show Package Contents 就找到bin目录），这样就可以跳过每次打开都检查sdk更新。
+
+##### 通过sdk manager进行更新
+![android-studio-2-sdkmanager.png](images/android-studio-2-sdkmanager.png)
+
+![android-studio-2-sdkman.png](images/android-studio-2-sdkman.png)
+通过以上任意一种方法就可以打开SDK Manager
+
+
+![android-studio-2-sdkupdate.png](images/android-studio-2-sdkupdate.png)
+理论上是可以直接更新SDK，但考虑到网速问题我们还是更换镜像源。
+
++ 1、启动 Android SDK Manager ，打开主界面，依次选择『Tools』、『Options...』，弹出『Android SDK Manager - Settings』窗口；
+
++ 2、在『Android SDK Manager - Settings』窗口中，在『HTTP Proxy Server」和「HTTP Proxy Port』输入框内填入上面镜像服务器地址(不包含http://，如下图)和端口，并且选中『Force https://... sources to be fetched using http://...』复选框。设置完成后单击『Close』按钮关闭『Android SDK Manager - Settings』窗口返回到主界面；
+
++ 3、依次选择『Packages』、『Reload』。
+
+```
+Android SDK在线更新镜像服务器
+
+中国科学院开源协会镜像站地址:
+
+IPV4/IPV6: http://mirrors.opencas.cn 端口：80
+
+IPV4/IPV6: http://mirrors.opencas.org 端口：80
+
+IPV4/IPV6: http://mirrors.opencas.ac.cn 端口：80
+
+上海GDG镜像服务器地址:
+
+http://sdk.gdgshanghai.com 端口：8000
+
+北京化工大学镜像服务器地址:
+
+IPv4: http://ubuntu.buct.edu.cn/ 端口：80
+
+IPv4: http://ubuntu.buct.cn/ 端口：80
+
+IPv6: http://ubuntu.buct6.edu.cn/ 端口：80
+
+大连东软信息学院镜像服务器地址:
+
+http://mirrors.neusoft.edu.cn 端口：80
+```
+
+
+
+#### 离线配置
+##### 下载SDK
+![andoid-studio-2-sdklinux.png](images\andoid-studio-2-sdklinux.png)
+下载对应的sdk，解压；
+
+##### 初次配置
+![android-studio-2-studio_wizard6.png](images/android-studio-2-studio_wizard6.png)
+
+![android-studio-2-sdkinstall1.png](images/android-studio-2-sdkinstall1.png)
+
+
+![android-studio-2-sdkset.png](images/android-studio-2-sdkset.png)
+
+
+![android-studio-2choosesdk2.png](images/android-studio-2choosesdk2.png)
+依次进入目录Configure->Project Defaults->Project Structure，配置SDK目录（即解压SDK对应的目录）
+
+##### 更换JDK，SDK目录
+
+![android-studio-2-sdksetq.png](images/android-studio-2-sdksetq.png)
+
+
+![android-studio-2-sdkse.png](images/android-studio-2-sdkse.png)
+
+进入file -> others setting ->default project struct
+
+
+
+
+
+
+
+
+
+
+
+
+### 补充：ubuntu下的JAVA环境配置
+ubuntu自带的是OpenJDK,这里还是推荐大家使用OrcalJDK,AS推荐使用的就是OrcalJDK.OpenJDK在编译的时候还是会出现一些问题的.
+
 #### 配置顺序
 java环境搭建->下载安装android studio->下载配置SDK->创建快捷方式
 
-
-
-#### 1. java环境搭建
-   ubuntu自带的是OpenJDK,这里还是推荐大家使用OrcalJDK,AS推荐使用的就是OrcalJDK.OpenJDK在编译的时候还是会出现一些问题的.
+   
    
    
 #####(一)添加软件源
@@ -161,25 +248,7 @@ cd ~/software/  说明：进入到保存sdk目录 
 tar -zxvf android-sdk_r23.0.2-linux.tgz //解压sdk 
 echo 'export ANDROID_HOME="'$HOME'/software/android-sdk-linux"' >> ~/.bashrc   //设置android环境变量 
 echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"' >> ~/.bashrc //设置android环境变量 
-echo 'export JAVA_CMD="/usr/local/java/jdk1.8.0_25/bin/java"' >> ~/.bashrc //设置java环境变量
-```
-终端输入android，出现提示说明配置成功
+echo 'export JAVA_CMD="/usr/local/java/jdk1.8.0_25/bin/java"' >> ~/.bashrc //设置java
+ ```
 
-打开android studio 根据提示配置SDK路径
-
-
-打开SDK manager更改更新源，进行更新；
-
-#### 4.新建项目
-
-![project.png](images/project.png)
-
-
-
-![p.png](images/p.png)
-![QQ截图20150507015808.png](images/QQ截图20150507015808.png)
-![QQ截图20150507015817.png](images/QQ截图20150507015817.png)
-
-
-![QQ截图20150507020029.png](images/QQ截图20150507020029.png)
 
