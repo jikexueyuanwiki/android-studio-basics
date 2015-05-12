@@ -107,7 +107,7 @@ http://mirrors.neusoft.edu.cn 端口：80
 
 #### 离线配置
 ##### 下载SDK
-![andoid-studio-2-sdklinux.png](images\andoid-studio-2-sdklinux.png)
+![andoid-studio-2-sdklinux.png](images/andoid-studio-2-sdklinux.png)
 下载对应的sdk，解压；
 
 ##### 初次配置
