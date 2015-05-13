@@ -11,7 +11,7 @@
 
 + 下载安装包
  * 官方下载地址（需翻墙）
-   http://developer.android.com/sdk/index.html
+   http://www.jikexueyuan.com/resources/
  * 推荐国内镜像网站
    http://www.androiddevtools.cn/#android-studio
 
